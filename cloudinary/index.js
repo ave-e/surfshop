@@ -17,7 +17,8 @@ const storage = new CloudinaryStorage({
 	console.log(uniqFileName)
     return {
       folder: 'surf-shop',
-      format: 'jpeg',
+      allowedFormats: ['jpeg', 'jpg', 'png', 'gif'],
+      transformation: [{ width: 800, height: 600, crop: "limit" }]
       public_id: uniqFileName,
     };
   },
