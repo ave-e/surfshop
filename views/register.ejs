@@ -1,0 +1,37 @@
+<% layout('layouts/boilerplate') -%>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <h1>Register</h1>
+
+<form action="/register" method="POST" enctype="multipart/form-data">
+	<div class="form-group">
+		<label for="username">Username:</label>
+		<input class="form-control "type="text" id="username" name="username" placeholder="username" value="<%= username %>" required>
+	</div>
+	<div class="form-group">
+		<label for="password">Password:</label>
+		<input class="form-control" type="password" id="password" name="password" placeholder="password" required>
+	</div>
+	<div>
+		<label for="email">Email:</label>
+		<input class="form-control" type="email" id="email" name="email" placeholder="email" value="<%= email %>" required>
+	</div>
+	<div>
+		<p class="py-1"></p>
+		<label for="image">Image:</label>
+		<input type="file" id="image" name="image">
+	</div>
+
+	<div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit</button>
+                </div>
+</form>
+        </div>
+    </div>
+</div>
+
+
+
+

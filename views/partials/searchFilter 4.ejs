@@ -1,0 +1,159 @@
+ <div class="container">
+ 
+  </section><!-- NEWSLETTER -->
+  <section class="bg-dark text-white py-5" id="newsletter">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <label for="search">Search</label> <input class="form-control" id="search" name="search" placeholder="Search" type="text" value="<%= query.search %>">
+        </div>
+        <div class="col-md-6">
+          <label for="location">Location</label> <input class="form-control" id="location" name="location" placeholder="address or zip" type="text" value="<%= query.location %>"> <small><a href="#" id="find-me">use my location</a></small><br>
+          <p id="status"></p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <form action="/posts" method="get">
+        <div class="row">
+          <div class="col-md-6 mx-auto">
+            <legend>Distance (miles)</legend>
+            <div>
+              <input id="distance25" name="distance" type="radio" value="25"> <label for="distance25">25</label>
+            </div>
+            <div>
+              <input id="distance50" name="distance" type="radio" value="50"> <label for="distance50">50</label>
+            </div>
+            <div>
+              <input id="distance100" name="distance" type="radio" value="100"> <label for="distance100">100</label>
+            </div>
+            <div>
+              <a href="#" id="clear-distance">clear</a>
+            </div>
+            <fieldset>
+              <legend>Price</legend> <label for="min">Min</label> <input id="min" max="10000" min="0" name="price[min]" placeholder="Min" step="1" type="text" value="<%= query.price ? query.price.min : '' %>"> <label for="max">Max</label> <input id="max" max="10000" min="0" name="price[max]" placeholder="Max" step="1" type="text" value="<%= query.price ? query.price.max : '' %>">
+            </fieldset>
+            <fieldset>
+              <legend>Rating</legend> <input id="zero-stars" name="avgRating[]" type="checkbox" value="0"> <label for="zero-stars">0 stars</label> <input id="one-star" name="avgRating[]" type="checkbox" value="1"> <label for="one-star">1 star</label> <input id="two-stars" name="avgRating[]" type="checkbox" value="2"> <label for="two-stars">2 stars</label> <input id="three-stars" name="avgRating[]" type="checkbox" value="3"> <label for="three-stars">3 stars</label> <input id="four-stars" name="avgRating[]" type="checkbox" value="4"> <label for="four-stars">4 stars</label> <input id="five-stars" name="avgRating[]" type="checkbox" value="5"> <label for="five-stars">5 stars</label>
+            </fieldset>
+            <div>
+              <a href="/posts">reset form</a>
+            </div>
+
+            <fieldset>
+            <div class="col-md-4">
+              </div><input class="btn btn-primary btn-block btn-lg" type="submit" value="Submit">
+              <!-- <button class="btn btn-primary btn-lg btn-block"><i class="fas fa-envelope-open-o"></i> Search</button> -->
+            </div>
+          </div>
+        </div>
+        </fieldset>
+      </form>
+      <script src="/javascripts/use-my-location.js">
+      </script>
+    </div>
+    <div class="collapse" id="collapse3">
+      <div class="card-body">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit odit laborum qui, debitis, sequi dolores nobis mollitia labore quasi earum laboriosam nihil cupiditate magnam iusto nostrum doloremque accusantium repudiandae expedita autem et, repellendus suscipit consequatur! Alias, maiores amet sunt ab inventore illo, deleniti facilis consequatur tenetur nam pariatur fuga nisi!
+      </div>
+    </div>
+  </div>
+
+
+     <!-- POSTS -->
+  <section id="posts" class="py-5">
+    <div class="primary-overlay text-yellow">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h4>Latest Posts</h4>
+            </div>
+            <table class="table table-striped">
+              <thead class="thead-dark">
+                <tr>
+                  <th>#</th>
+                  <th>Title</th>
+                  <th>Category</th>
+                  <th>Date</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Post One</td>
+                  <td>Web Development</td>
+                  <td>May 10 2018</td>
+                  <td>
+                    <a href="details.html" class="btn btn-secondary">
+                      <i class="fas fa-angle-double-right"></i> Details
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Post Two</td>
+                  <td>Tech Gadgets</td>
+                  <td>May 11 2018</td>
+                  <td>
+                    <a href="details.html" class="btn btn-secondary">
+                      <i class="fas fa-angle-double-right"></i> Details
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Post Three</td>
+                  <td>Web Development</td>
+                  <td>May 13 2018</td>
+                  <td>
+                    <a href="details.html" class="btn btn-secondary">
+                      <i class="fas fa-angle-double-right"></i> Details
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Post Four</td>
+                  <td>Business</td>
+                  <td>May 15 2018</td>
+                  <td>
+                    <a href="details.html" class="btn btn-secondary">
+                      <i class="fas fa-angle-double-right"></i> Details
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Post Five</td>
+                  <td>Web Development</td>
+                  <td>May 17 2018</td>
+                  <td>
+                    <a href="details.html" class="btn btn-secondary">
+                      <i class="fas fa-angle-double-right"></i> Details
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Post Six</td>
+                  <td>Health & Wellness</td>
+                  <td>May 20 2018</td>
+                  <td>
+                    <a href="details.html" class="btn btn-secondary">
+                      <i class="fas fa-angle-double-right"></i> Details
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>       
+  </section>
+
+
+  
+  
+
