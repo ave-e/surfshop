@@ -1,6 +1,6 @@
 # surfshop
 nodejs with mongo db
 
-Need to add wrapkit folde with files to public folder
+Need to add wrapkit folder with files to public folder
 
 
