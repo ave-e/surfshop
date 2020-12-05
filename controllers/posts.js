@@ -133,3 +133,4 @@ module.exports = {
 		res.redirect('/posts');
 	}
 }
+
