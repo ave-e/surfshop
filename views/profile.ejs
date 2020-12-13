@@ -1,6 +1,6 @@
 <% layout('layouts/boilerplate') -%>
 
-<h1><img src="<%= currentUser.image.secure_url %>" alt="<%= currentUser.username %>'s profile image" class="profile-image"><%= currentUser.username %>'s Profile</h1>
+<h1><img src="<%= currentUser.image.path %>" alt="<%= currentUser.username %>'s profile image" class="profile-image"> <%= currentUser.username %>'s Profile</h1>
 
 <p>Recent Posts:</p>
 
