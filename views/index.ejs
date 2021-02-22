@@ -18,7 +18,7 @@
       <!-- Column -->
       <div class="col-md-4">
         <div class="card" data-aos="flip-left" data-aos-duration="1200">
-          <a href="/posts/<%= post.id %>"><img class="card-img-top-fluid" src="<%= post.images[0].url %>" alt="wrappixel kit"></a>
+          <a href="/posts/<%= post.id %>"><img class="card-img-top" src="<%= post.images[0].path %>" alt="image kit"></a>
           <div class="date-pos bg-info-gradiant"><%= moment(post._id).format('MMM') %><span><%= moment(post._id).format('D') %></span></div>
           <h5 class="font-medium my-3"><a href="/posts/<%= post.id %>" class="link"><%= post.title %></a></h5>
           <p class="my-1"><%= post.location %></p>    
